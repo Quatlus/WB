@@ -1,0 +1,511 @@
+/* @override 
+	http://dev.wildbrett.info/files/assets/wb.css */
+
+style {
+	
+}/* @override 
+	http://dev.wildbrett.info/files/assets/wb.css */
+
+#top.dev {
+	background-color: white;
+}
+
+#top {
+	background: url("./bg/white.png") repeat-x rgb(178, 178, 178);
+}
+
+hr {
+	border-bottom: 1px solid #000000;
+	padding-bottom: 18px;
+	margin-bottom: 30px;
+}
+
+* {
+	font: 17px/22px 'titilliumregular';
+	font-style: normal;
+	font-weight: 400;
+	box-sizing: border-box;
+	border: 0;
+}
+
+* {
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+strong {
+	 font-family: 'titilliumbold';
+	/*font-size: 18px;*/
+}
+
+#start .ce_text p {
+	/*background-color: white;*/
+	padding: 30px 0px 0px;
+	text-align: left!important;
+}
+
+.product {
+	background-color: rgba(255, 255, 255, 0.27);
+	float: left;
+	width: 900px;
+	margin-bottom: 12px;
+}
+
+h2 {
+	letter-spacing: 0;
+	text-transform: uppercase;
+	color: white;
+	font-size: 20px;
+	font-weight: 600;
+	/*400,200, 300, 500, 600,700,900*/
+	margin: 0;
+	padding: 0;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.16);
+}
+
+.product .colors {
+	float: left;
+	width: 900px;
+}
+
+.product .colors label {
+	float: left;
+	display: block;
+	/*width: 100px;*/
+	margin-right: 5px;
+	margin-bottom: 5px;
+	border: 2px solid transparent;
+}
+
+.color {
+	width: 20px;
+	height: 20px;
+	background-color: silver;
+}
+
+.color_1 {
+	
+}
+
+.productstart {
+	background-color: rgba(255, 255, 255, 0.27);
+	float: left;
+	width: 200px;
+	margin-right: 50px;
+	height: 123px;
+	overflow: hidden;
+	padding: 20px;
+	position: relative;
+	-moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.35);
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.35);
+	border-radius: 5px;
+	margin-bottom: 50px;
+	/*transition: width 200ms, height 200ms;*/
+}
+
+.productstart p {
+	color: white;
+}
+
+.egghole {
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	top: 16px;
+	border-radius: 12px;
+	-moz-box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.35);
+	box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.35);
+	right: 16px;
+	background-color: rgb(235, 202, 202);
+}
+
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	background-color: white;
+	width: 100%;
+	height: 240px;
+	
+	-webkit-transition: height 0.3s;
+	-moz-transition: height 0.3s;
+	-ms-transition: height 0.3s;
+	-o-transition: height 0.3s;
+	transition: height 0.3s;
+}
+
+
+#header.smaller,
+#header.smaller .inside  {
+    height: 140px;
+}
+
+#header .inside {
+	margin: 0 auto;
+	padding: 0;
+	width: 890px;
+	height: 240px;
+	
+	-webkit-transition: height 0.3s;
+	-moz-transition: height 0.3s;
+	-ms-transition: height 0.3s;
+	-o-transition: height 0.3s;
+	transition: height 0.3s;
+}
+
+#main {
+	padding-top: 260px;
+}
+
+.mod_navigation {
+	height: 36px;
+	background-color: black;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	
+	-webkit-transition: height 0.3s;
+	-moz-transition: height 0.3s;
+	-ms-transition: height 0.3s;
+	-o-transition: height 0.3s;
+	transition: height 0.3s;
+	z-index: 100;
+}
+
+#header.smaller .mod_navigation {
+	height: 36px;
+}
+
+.mod_navigation ul {
+	margin: 4px 0 0;
+	padding: 0;
+}
+
+.mod_navigation ul li a {
+	float: left;
+	color: white;
+	font: 17px 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-style: normal;
+
+	text-decoration: none;
+	margin-left: 17px;
+	margin-right: 2px;
+	letter-spacing: 1px;
+
+	opacity: 1;
+}
+
+.start .mod_navigation ul li a {
+	opacity: 0;
+	display: none;
+}
+
+
+.start .mod_navigation.show ul li a {
+	opacity: 1;
+	display: block;
+}
+
+.mod_navigation ul li a.active {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 700;
+}
+
+.mod_navigation #over {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 60px;
+	overflow: hidden;
+	height: 36px;	
+}
+
+.mod_navigation #over.on {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.mod_navigation ul.filter {
+	width: 180px;
+	position: relative;
+	left: -105px;
+}
+
+.mod_navigation ul.filter a {
+	color: #a7a7a7 !important;
+	margin: 0;
+}
+
+.mod_navigation ul.filter a:hover {
+	color: white!important;	
+}
+
+.mod_navigation #over.on ul.filter a {
+	color: white!important;
+}
+
+.mod_navigation ul.filter a::after {
+	content: " / ";
+	margin-right: 5px;
+	color: white;
+}
+
+.choosefilter {
+	display: none;
+}
+
+.start .choosefilter {
+	display: block;
+}
+
+a.choosefilter.bold {
+	font-weight: 700;
+	cursor: default;
+}
+
+.mod_navigation #over.on ul.filter a.openfilter.act {
+	/*border-bottom-width: 1px;
+	border-bottom-style: solid;*/
+	color: #bcbbb1 !important;
+}
+
+ul.farben_ul,
+ul.filter_ul {
+	display: none;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+#header.smaller ul.farben_ul,
+#header.smaller ul.filter_ul {
+	top: 103px !important;
+}
+
+ul.farben_ul,
+ul.filter_ul  {
+	height: 36px;
+	margin: 0 0 6px;
+	padding: 6px 0 0 15px;
+	background-color: white;
+	position: relative;
+	left: 0;
+	top: 138px;
+	z-index: 10;
+}
+
+ul.farben_ul li,
+ul.filter_ul li {
+	float: left;
+	margin-right: 4px;
+	letter-spacing: 1px;
+	color: #6a6a6a;
+}
+
+.mod_navigation ul.filter li:last-child a::after {
+	content: "";
+	margin-right: 0;
+}
+
+#header.show .mod_navigation ul li a,
+#header.smaller .mod_navigation ul li a {
+	opacity: 1;
+}
+
+#header.smaller .mod_navigation ul  {
+	
+}
+
+.mod_navigation ul li a:hover {
+	/*color: #bebebe;*/
+}
+
+.mod_navigation ul li a.active:hover {
+	color: white;
+	cursor: default;
+}
+
+
+#logo {
+	width: 303px;
+	height: 66px;
+	background: url("./bg/wb72.png") 0 0 no-repeat;
+	background: url("./bg/wb.png") 0 0 / 284px 62px no-repeat;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	top: 72px;
+	text-decoration: underline;
+	
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+#header.smaller #logo {
+	background: url("./bg/wb.png") 0 0 / 170px 37px no-repeat;
+	width: 170px;
+	height: 37px;
+	top: 30px;
+}
+
+.start #logo {
+	cursor: default;	
+}
+
+.start #shownav {
+	opacity: .3;
+}
+
+#shownav {
+	width: 27px;
+	height: 20px;
+	background: url("./bg/shownav.png");
+	position: absolute;
+	right: 0;
+	top: 102px;
+	opacity: 0;
+	cursor: pointer;
+	
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+#shownav:hover {
+	opacity: .6;
+}
+
+.smaller #shownav {
+	opacity: 0;
+	top: 50px;
+}
+
+@media (max-width: 10000px) {
+	#wrapper {
+		width: 1130px;
+		margin-right: auto;
+		margin-left: auto;
+		/*transition: width 200ms;*/
+	}
+	
+	.mod_wildbrettshop {
+		width: 1250px;
+		padding-left: 15px;
+	}
+	
+	#header .inside {
+		width: 1130px;
+	}
+}
+
+@media (max-width: 1220px) {
+	#wrapper {
+		width: 890px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	
+	.mod_wildbrettshop {
+		width: 920px;
+		padding-left: 15px;
+	}
+	
+	#header .inside {
+		width: 890px;
+	}
+}
+
+@media (max-width: 980px) {
+	#wrapper {
+		width: 736px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	
+	.mod_wildbrettshop {
+		width: 800px;
+		padding-left: 10px;
+	}
+	
+	#header .inside {
+		width: 736px;
+	}
+}
+
+
+@media (max-width: 767px) {
+	#wrapper {
+		width: 567px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	
+	.mod_wildbrettshop {
+		width: 600px;
+		padding-left: 15px;
+	}
+	.productstart {
+		margin-right: 15px;
+		margin-bottom: 15px;
+		width: 170px;
+		height: 105px;
+		border-radius: 4px;
+		background-size: 100%;
+	}
+	.egghole {
+		width: 20px;
+		height: 20px;
+		top: 13px;
+		border-radius: 10px;
+		right: 13px;
+	}
+}
+
+
+@media (max-width: 567px) {
+	#wrapper {
+		width: 315px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	
+	.mod_wildbrettshop {
+		width: 320px;
+		padding-left: 20px;
+	}
+	
+	.productstart {
+		margin-right: 20px;
+		margin-bottom: 20px;
+		width: 130px;
+		height: 80px;
+		border-radius: 3px;
+		background-size: 100%;
+	}
+	
+	.egghole {
+		width: 16px;
+		height: 16px;
+		top: 10px;
+		border-radius: 8px;
+		right: 10px;
+	}
+	
+}
+
+
