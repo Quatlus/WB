@@ -21,11 +21,12 @@ hr {
 }
 
 * {
-	font: 17px/22px 'titilliumregular';
+	font: 17px/23px 'titilliumregular';
 	font-style: normal;
 	font-weight: 400;
 	box-sizing: border-box;
 	border: 0;
+	letter-spacing: 1px;
 }
 
 * {
