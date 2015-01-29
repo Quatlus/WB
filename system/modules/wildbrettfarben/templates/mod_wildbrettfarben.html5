@@ -1,0 +1,15 @@
+
+	<ul class="farben_ul">
+<? 
+	$out = '';
+	
+	
+	foreach ($this->farben as $key => $value) {
+		$out .= '<li>' . $value['title'] . ' / </li>';
+	}
+	$out = substr($out, 0, -7);
+	$out .= '</li>';
+	echo $out;
+	
+?>
+	</ul>

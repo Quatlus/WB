@@ -1,0 +1,14 @@
+<?xml version="1.0" ?><xliff version="1.1">
+  <file datatype="php" original="system/modules/wildbrettfarben/languages/en/modules.php" source-language="en">
+    <body>
+      <trans-unit id="MOD.wildbrettfarben.0">
+        <source>Wildbrett Farben</source>
+        <target>Wildbrett Farben</target>
+      </trans-unit>
+      <trans-unit id="MOD.wildbrettfarben.1">
+        <source>Manage Wildbrett Farben</source>
+        <target>Wildbrett Farben verwalten</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

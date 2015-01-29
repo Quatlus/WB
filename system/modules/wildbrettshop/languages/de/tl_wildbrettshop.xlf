@@ -1,0 +1,78 @@
+<?xml version="1.0" ?><xliff version="1.1">
+  <file datatype="php" original="system/modules/wildbrettsho/languages/en/tl_wildbrettshop.php" source-language="en">
+    <body>
+      <trans-unit id="tl_wildbrettshop.title.0">
+        <source>Title</source>
+        <target>Titel</target>
+      </trans-unit>
+      <trans-unit id="tl_wildbrettshop.title.1">
+        <source>Please enter the title.</source>
+        <target>Bitte geben Sie den Titel ein.</target>
+      </trans-unit>
+      <trans-unit id="tl_wildbrettshop.text.0">
+        <source>Beschreibung</source>
+        <target>Beschreibung</target>
+      </trans-unit>
+      <trans-unit id="tl_wildbrettshop.text.1">
+        <source>Beschreibung angeben</source>
+        <target>Beschreibung angeben. Länge auf Website überprüfen.</target>
+      </trans-unit>
+      <trans-unit id="tl_wildbrettshop.filter.0">
+        <source>Filter</source>
+        <target>Filter</target>
+      </trans-unit>
+      <trans-unit id="tl_wildbrettshop.farben.0">
+        <source>Colors</source>
+        <target>Varianten ohne Eiloch</target>
+      </trans-unit>
+      <trans-unit id="tl_wildbrettshop.farben.1">
+        <source>Colors</source>
+        <target>lieferbare Farben</target>
+      </trans-unit>
+      <trans-unit id="tl_wildbrettshop.egghole.0">
+        <source>Egghole</source>
+        <target>Varianten mit Eiloch</target>
+      </trans-unit>
+      <trans-unit id="tl_wildbrettshop.egghole.1">
+        <source>Egghole</source>
+        <target>lieferbare Farben</target>
+      </trans-unit>
+      <trans-unit id="tl_wildbrettshop.price.0">
+        <source>Price</source>
+        <target>Preis</target>
+      </trans-unit>
+      <trans-unit id="tl_wildbrettshop.price.1">
+        <source>Bruttopreis</source>
+        <target>Bruttopreis, nur Zahlen, z.B.: 24 oder 24.50 (kein Komma, sondern Punkt verwenden bei Kommazahl, auf Website würde dann wieder Komma statt Punkt angezeigt.)</target>
+      </trans-unit>
+      <trans-unit id="tl_wildbrettshop.deliverytime.0">
+        <source>delivery time</source>
+        <target>verlängerte Lieferzeit ohne Eiloch</target>
+      </trans-unit>
+      <trans-unit id="tl_wildbrettshop.deliverytime.1">
+        <source>delivery time</source>
+        <target>(Definition der Lieferdauer in den Einstellungen.)</target>
+      </trans-unit>
+      <trans-unit id="tl_wildbrettshop.deliverytime2.0">
+        <source>delivery time mit</source>
+        <target>verlängerte Lieferzeit mit Eiloch</target>
+      </trans-unit>
+      <trans-unit id="tl_wildbrettshop.deliverytime2.1">
+        <source>delivery time mit</source>
+        <target>(Definition der Lieferdauer in den Einstellungen.)</target>
+      </trans-unit>
+      <trans-unit id="tl_wildbrettshop.title_legend">
+        <source>Title</source>
+        <target>Titel</target>
+      </trans-unit>
+      <trans-unit id="tl_wildbrettshop.desc_legend">
+        <source>Beschreibung</source>
+        <target>Beschreibung</target>
+      </trans-unit>
+      <trans-unit id="tl_wildbrettshop.attributes_legend">
+        <source>Attributes</source>
+        <target>Eigenschaften</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

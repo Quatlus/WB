@@ -1,0 +1,23 @@
+<?xml version="1.0" ?><xliff version="1.1">
+  <file datatype="php" original="system/modules/wildbrettshop/languages/en/modules.php" source-language="en">
+    <body>
+      <trans-unit id="MOD.wildbrettshop.0">
+        <source>Wildbrett Shop</source>
+        <target>Wildbrett Shop</target>
+      </trans-unit>
+      <trans-unit id="MOD.wildbrettshop.1">
+        <source>Manage Wildbrett Shop</source>
+        <target>Wildbrett Shop verwalten</target>
+      </trans-unit>
+      <trans-unit id="FMD.wildbrettshop.0">
+        <source>Wildbrett Shop</source>
+        <target>Wildbrett Shop</target>
+      </trans-unit>
+      <trans-unit id="FMD.wildbrettshop.1">
+        <source>Wildbrett Shop</source>
+        <target>Wildbrett Shop Ausgabe</target>
+      </trans-unit>
+      
+    </body>
+  </file>
+</xliff>

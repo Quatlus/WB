@@ -1,0 +1,100 @@
+
+<div class="<?php echo $this->class; ?> block"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
+
+  <?php if ($this->headline): ?>
+    <<?php echo $this->hl; ?>><?php echo $this->headline; ?></<?php echo $this->hl; ?>>
+  <?php endif; ?>
+
+	<!--<div class="product">-->
+	
+<? 
+
+	$output = '';
+	foreach ($this->records as $key => $value) {
+		$output .= '<div id="' . $value['id'] . '" class="product">';
+		$output .= '<h2>';
+		$output .= $value['title'];
+		$output .= '</h2>';
+		$output .= '<p>';
+		$output .= $value['text'];
+		$output .= '</p>';
+		$output .= '<p>';
+		$output .= '<div class="colors"><form action="">';
+		
+		$output .= '<label><input checked=checked class="eggsel" type="radio" name="' . $value['id'] . '" value="egg"> Loch</label>';
+		$output .= '<label><input class="eggsel" type="radio" name="' . $value['id'] . '" value="noegg"> ohne Loch</label><br><br>';
+		$output .= '<div style="clear:both;"></div>';
+		if ($value['farben']) {
+			foreach ($value['farben'] as $key => $colorvalue) {
+				#var_dump($value);
+				if($value['color'] == $colorvalue['id'] && $value['product'] == $value['id']) {
+					$output .=  '<label style="display:none;" class="noeggs' . $value['id'] . ' colorlabel selected"><input checked=checked style="opacity:.5;" type="radio" name="varianten-' . $value['id'] . '" class="varianten-' . $value['id'] . '" title="' . $colorvalue['title'] . '" data-id="' . $value['id'] . '" data-color="' . $colorvalue['id'] . '" data-egg="' . $colorvalue['egghole'] . '"  data-time="' . $colorvalue['delivery'] . '" value="product_' . $value['id'] . '_' . $colorvalue['id'] . '"><div style="background-color:rgb(' . $colorvalue['rgb'][0] . ',' . $colorvalue['rgb'][1] . ',' . $colorvalue['rgb'][2] . ');" class="color noegg color_' . $colorvalue['id'] . '">' . ($colorvalue['egghole']=='true' ? '' : '') . '</div></label>';
+				} else {
+					$output .=  '<label style="display:none;" class="noeggs' . $value['id'] . ' colorlabel"><input style="opacity:.5;" type="radio" name="varianten-' . $value['id'] . '" class="varianten-' . $value['id'] . '" title="' . $colorvalue['title'] . '" data-id="' . $value['id'] . '" data-color="' . $colorvalue['id'] . '" data-egg="' . $colorvalue['egghole'] . '"  data-time="' . $colorvalue['delivery'] . '" value="product_' . $value['id'] . '_' . $colorvalue['id'] . '"><div style="background-color:rgb(' . $colorvalue['rgb'][0] . ',' . $colorvalue['rgb'][1] . ',' . $colorvalue['rgb'][2] . ');" class="color noegg color_' . $colorvalue['id'] . '">' . ($colorvalue['egghole']=='true' ? '' : '') . '</div></label>';
+				}
+			}
+			#$output .= '<div style="clear:both;"></div>';
+		}
+		
+		if ($value['farbenegg']) {
+			
+			foreach ($value['farbenegg'] as $key => $colorvalue) {
+				#var_dump($value);
+					$output .=  '<label  class="eggs' . $value['id'] . ' colorlabel"><input  style="opacity:.5;" type="radio" name="varianten-' . $value['id'] . '" class="varianten-' . $value['id'] . '" title="' . $colorvalue['title'] . '" data-id="' . $value['id'] . '" data-color="' . $colorvalue['id'] . '" data-egg="' . $colorvalue['egghole'] . '"  data-time="' . $colorvalue['delivery'] . '" value="product_' . $value['id'] . '_' . $colorvalue['id'] . '_egg"><div style="background-color:rgb(' . $colorvalue['rgb'][0] . ',' . $colorvalue['rgb'][1] . ',' . $colorvalue['rgb'][2] . ');" class="color egg color_' . $colorvalue['id'] . '">' . ($colorvalue['egghole']=='true' ? '' : '') . '</div></label>';
+				
+			}
+		}
+		
+		$output .= '</form></div>';
+		$output .= '<br><div style="float:left;opacity:0.3;" class="basket' . $value['id'] . '">Warenkorb</div>';		
+		$output .= '</div>';
+	}
+	
+	echo $output;
+
+?>
+	<!--</div>-->
+	
+</div>
+
+<script>
+
+jQuery(document).ready(function( $ ) {
+
+	$('.eggsel').on('click', function (e) {
+		$targ = e.target;
+		//console.log($targ.name);
+		var boxes = $('.varianten-' + $targ.name);
+		$('.basket' + $targ.name).css({'opacity':0.3});
+		$('.colorlabel').removeClass('selected');
+		$(boxes).attr('checked', false);
+		if ($targ.value == 'noegg') {
+			$('.eggs' + $targ.name).hide();
+			$('.noeggs' + $targ.name).show();
+		} else if ($targ.value == 'egg') {
+			$('.noeggs' + $targ.name).hide();
+			$('.eggs' + $targ.name).show();
+		}
+		
+		
+		//console.log($boxes,'.varianten-' + $targ.name);
+	});
+	
+	$('.colorlabel').on('click', function(e) {
+		//var targ = e.target;
+		$('.colorlabel').removeClass('selected');
+		$(this).addClass('selected');
+	});
+	//console.log('###');
+
+
+});
+
+</script>
+<style>
+	
+	.selected {
+		border: 2px solid #333!important;
+	}
+
+</style>

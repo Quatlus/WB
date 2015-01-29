@@ -1,0 +1,14 @@
+<?xml version="1.0" ?><xliff version="1.1">
+  <file datatype="php" original="system/modules/wildbrettfilter/languages/en/modules.php" source-language="en">
+    <body>
+      <trans-unit id="MOD.wildbrettfilter.0">
+        <source>Wildbrett Filter</source>
+        <target>Wildbrett Filter</target>
+      </trans-unit>
+      <trans-unit id="MOD.wildbrettfilter.1">
+        <source>Manage Wildbrett Filter</source>
+        <target>Wildbrett Filter verwalten</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

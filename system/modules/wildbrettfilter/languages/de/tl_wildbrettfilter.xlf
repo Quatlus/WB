@@ -1,0 +1,22 @@
+<?xml version="1.0" ?><xliff version="1.1">
+  <file datatype="php" original="system/modules/wildbrettsho/languages/en/tl_wildbrettfilter.php" source-language="en">
+    <body>
+      <trans-unit id="tl_wildbrettfilter.title.0">
+        <source>Title</source>
+        <target>Titel</target>
+      </trans-unit>
+      <trans-unit id="tl_wildbrettfilter.title.1">
+        <source>Please enter the title.</source>
+        <target>Bitte geben Sie den Titel ein.</target>
+      </trans-unit>
+      <trans-unit id="tl_wildbrettfilter.sorting.0">
+        <source>Sorting</source>
+        <target>Reihenfolge</target>
+      </trans-unit>
+      <trans-unit id="tl_wildbrettfilter.title_legend">
+        <source>Title</source>
+        <target>Titel</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

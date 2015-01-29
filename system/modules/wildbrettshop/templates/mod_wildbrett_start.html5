@@ -1,0 +1,89 @@
+
+<div class="<?php echo $this->class; ?> block"<?php echo $this->cssID; ?><?php if ($this->style): ?> style="<?php echo $this->style; ?>"<?php endif; ?>>
+
+  <?php if ($this->headline): ?>
+    <<?php echo $this->hl; ?>><?php echo $this->headline; ?></<?php echo $this->hl; ?>>
+  <?php endif; ?>
+
+	<!--<div class="product">-->
+	
+<? 
+
+	
+	$sortedOutput = array();
+	foreach ($this->records as $key => $value) {
+		#var_dump($value);
+		if ($value['farben']) {
+			
+			foreach ($value['farben'] as $key => $colorvalue) {
+				$output = '';
+				
+				
+				$objFile = \FilesModel::findByPk($value['image']);
+				$imagePath = $objFile->path;
+				if ($imagePath) {
+					$fp = $imagePath . '/' . $value['alias'] . '_' . standardize($colorvalue['title']) . '.png';
+					#var_dump($colorvalue['title']);
+					$fp = $this->getImage($fp, 200, 123, 'center_center');
+					if ($fp) {
+						#$fp = $this->generateImage($fp, $value['title']);
+					}
+					
+					#$fp = $this->generateImage($this->getImage($fp, 280, 170, 'center_center'), $value['title']);
+				}
+			#	$fp = '../files/' . $imagePath . '/' . $aliasPath . '_' . standardize($objFarbenArray[$value]) . '.png';
+				
+			#	file_exists($fp);
+				$page_alias = $GLOBALS['SHOP_VARS']['shop_pageID']; 
+				$arrPage = \PageModel::findPublishedByIdOrAlias($page_alias)->current()->row();
+				$detailPageUrl = $this->generateFrontendUrl($arrPage,'/product/' . $value['id'] . '/color/' . $colorvalue['id']);
+				
+				
+				$output .= '<a href="' . $detailPageUrl . '#' .  $value['id'] . '" class="productstart" style="background-image: url(' . $fp . ');background-color:rgb(' . $colorvalue['rgb'][0] . ',' . $colorvalue['rgb'][1] . ',' . $colorvalue['rgb'][2] . ');" >';	
+				
+					$output .= '<h2>';
+					$output .= $value['title'];
+					$output .= '</h2>';
+					$output .= '<p>';
+					$output .= $value['text'];
+					$output .= '</p>';
+					$output .= '<p>';
+					#$output .= $fp;
+					$output .= '</p>';
+					
+					if ($colorvalue['egghole']) {
+						 $output .=  '<div class="egghole fade"></div>';
+					} else {
+						$output .=  '';
+					}
+					
+				$output .= '</a>';
+				
+				$sortedOutput[] = $output;
+			}
+		}
+	}
+	
+	function shuffle_assoc($list) { 
+	  if (!is_array($list)) return $list; 
+	
+	  $keys = array_keys($list); 
+	  shuffle($keys); 
+	  $random = array(); 
+	  foreach ($keys as $key) { 
+	    $random[$key] = $list[$key]; 
+	  }
+	  return $random; 
+	} 
+	
+	$unsortedOutput = shuffle_assoc($sortedOutput);
+	echo '<p>' . sizeof($unsortedOutput) . ' Artikel gefunden</p>';
+	foreach ($unsortedOutput as $key => $value) {
+		echo $value;
+	}
+	#echo $unsortedOutput;
+
+?>
+	<!--</div>-->
+	
+</div>
